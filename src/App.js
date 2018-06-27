@@ -29,7 +29,7 @@ class App extends Component {
         const findcartoon = this.state.unselectedcartoons.find(item => item.character === character);
 
         if(findcartoon === undefined) {
-            // failure to select a new dog
+           
             this.setState({ 
                 message: "You guessed incorrectly!",
                 topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
@@ -39,7 +39,7 @@ class App extends Component {
             });
         }
         else {
-            // success to select a new dog
+            
             const newcartoons = this.state.unselectedcartoons.filter(item => item.character !== character);
             
             this.setState({ 
